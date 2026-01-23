@@ -1,0 +1,73 @@
+/* LandingPage.css */
+
+/* Scope styles to landing page to avoid conflicts */
+.landing-page-body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #000;
+    color: white;
+    overflow-x: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* Reset margins/padding for this specific context if needed, 
+     though global reset usually handles it in index.css */
+}
+
+.landing-container {
+    text-align: center;
+    z-index: 10;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.landing-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    opacity: 0.8;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.landing-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.landing-description {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+.landing-cta-button {
+    background: transparent;
+    color: white;
+    border: 2px solid #00ffff;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.landing-cta-button:hover {
+    background: rgba(0, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+/* Canvas para el fondo animado */
+#particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}

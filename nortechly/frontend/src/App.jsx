@@ -6,15 +6,28 @@ import Cart from './pages/Cart';
 import Auth from './pages/Auth';
 import './index.css';
 
+import LandingPage from './pages/LandingPage';
+
 function App() {
     return (
-        <MainLayout>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="/auth" element={<Auth />} />
-            </Routes>
-        </MainLayout>
+        <Routes>
+            <Route path="/" element={<LandingPage />} />
+
+            <Route
+                path="/*"
+                element={
+                    <MainLayout>
+                        <Routes>
+                            <Route path="/home" element={<Home />} />
+                            <Route path="/cart" element={<Cart />} />
+                            <Route path="/auth" element={<Auth />} />
+                            {/* Redirect unknown routes to home or keep 404 behavior */}
+                            <Route path="*" element={<Home />} />
+                        </Routes>
+                    </MainLayout>
+                }
+            />
+        </Routes>
     );
 }
 

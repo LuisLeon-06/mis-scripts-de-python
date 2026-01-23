@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import SupportWidget from './SupportWidget';
 
 const MainLayout = ({ children }) => {
     const location = useLocation();
@@ -33,6 +34,7 @@ const MainLayout = ({ children }) => {
             <main>
                 {children}
             </main>
+            <SupportWidget />
             <Footer />
         </div>
     );
