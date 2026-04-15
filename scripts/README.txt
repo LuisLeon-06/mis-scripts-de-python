@@ -1,0 +1,1 @@
+Bienvenido a mi repositorio, aqui se subiran scripts de Python dedicados a Ciencia de Datos e IA.
